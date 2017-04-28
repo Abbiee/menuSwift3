@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RevealViewController" customModule="hamburgerMenuSwift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="nFZ-fV-2PP" kind="custom" identifier="sw_right" customClass="SWRevealViewControllerSegueSetController" id="BPK-nR-wgD"/>
+                        <segue destination="VrE-t1-bdc" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="e6h-xP-7lL"/>
+                        <segue destination="7QX-OK-4Dy" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Kfa-k3-rph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2804" y="234"/>
+        </scene>
+        <!--Reveal Table Table View Controller-->
+        <scene sceneID="oE2-nS-ZnX">
+            <objects>
+                <tableViewController storyboardIdentifier="RearTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VrE-t1-bdc" customClass="RevealTableTableViewController" customModule="hamburgerMenuSwift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="i3H-ox-oXT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Op4-55-3SL">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Op4-55-3SL" id="QXq-c6-Dtg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VrE-t1-bdc" id="YvB-6k-mDq"/>
+                            <outlet property="delegate" destination="VrE-t1-bdc" id="3dY-g1-fjW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKo-fa-gBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="49"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZDi-bV-9Ry">
+            <objects>
+                <navigationController id="7QX-OK-4Dy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JJS-44-YGq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HCw-Bm-zLT" kind="relationship" relationship="rootViewController" id="O1S-oE-zDR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOR-Vu-bB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="734"/>
+        </scene>
+        <!--Front-->
+        <scene sceneID="FQO-sE-MRV">
+            <objects>
+                <viewController storyboardIdentifier="FrontViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HCw-Bm-zLT" customClass="FrontViewController" customModule="hamburgerMenuSwift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Ec-Ly-Lcx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZYL-mO-D8m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="90J-hL-Dk3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-zd-WxU">
+                                <rect key="frame" x="91" y="162" width="218" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.12575155230000001" blue="0.22690841580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Front" id="yDC-gs-bEd">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="aQ5-dY-acm"/>
+                        <barButtonItem key="rightBarButtonItem" title="Right" id="nbw-wI-RRI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leftButton" destination="aQ5-dY-acm" id="Tpe-Tu-8cs"/>
+                        <outlet property="rightButton" destination="nbw-wI-RRI" id="fhW-6g-dGH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKk-9z-Svs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.39999999999998" y="732.68365817091455"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="9ly-hr-7GR">
+            <objects>
+                <viewController storyboardIdentifier="RightViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nFZ-fV-2PP" customClass="RightViewController" customModule="hamburgerMenuSwift3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oy2-n8-H4n"/>
+                        <viewControllerLayoutGuide type="bottom" id="hn6-Lw-yjH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e4Z-Sh-4HK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKX-zA-Yfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="-635"/>
+        </scene>
+    </scenes>
+</document>
